@@ -25,4 +25,7 @@ Known bugs:
 
 References:
 -http://oredev.org/2010/sessions/hypermedia-apis
+
+
+
 -https://spring.io/blog/2009/03/16/adding-an-atom-view-to-an-application-using-spring-s-rest-support
