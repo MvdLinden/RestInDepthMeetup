@@ -28,4 +28,20 @@ public class Order {
     public UUID getProductId() {
         return productId;
     }
+
+    public void setIdentifier(UUID identifier) {
+        this.identifier = identifier;
+    }
+
+    public void setAmount(Integer amount) {
+        this.amount = amount;
+    }
+
+    public void setProductId(UUID productId) {
+        this.productId = productId;
+    }
+
+    public String toString() {
+        return "UUID: " + identifier + " amount: " + amount + " productID: " + productId;
+    }
 }

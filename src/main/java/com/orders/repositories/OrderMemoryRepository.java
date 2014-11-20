@@ -18,8 +18,11 @@ public class OrderMemoryRepository implements OrderRepository {
     //    this.orders = Collections.unmodifiableMap(orders);
     //}
 
+    // TODO: why is repo created twice??
     public OrderMemoryRepository(){
-        Order order = new Order(UUID.randomUUID(), 1, UUID.randomUUID());
+        UUID uid = UUID.randomUUID();
+        System.out.println("Adding order with UID: " + uid);
+        Order order = new Order(uid, 1, UUID.randomUUID());
         Map<UUID, Order> modifiableOrders = new HashMap<UUID, Order>(orders);
         modifiableOrders.put(order.getIdentifier(), order);
         this.orders = Collections.unmodifiableMap(modifiableOrders);

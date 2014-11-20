@@ -15,6 +15,8 @@ import java.util.UUID;
 public class OrderResource extends ResourceSupport {
 
     // TODO: check if identifier can be called id. Conflicts with ResourceSupport which has a getId() that returns a link.
+    // TODO: this looks like Order. can we avoid duplication somehow?
+    // Note: Need setters because of BeanUtils.copy method
 
     private UUID identifier;
     private Integer amount;
@@ -40,5 +42,16 @@ public class OrderResource extends ResourceSupport {
     }
 
     public UUID getIdentifier() { return identifier; }
+    public void setIdentifier(UUID identifier) {
+        this.identifier = identifier;
+    }
+
+    public void setAmount(Integer amount) {
+        this.amount = amount;
+    }
+
+    public void setProductId(UUID productId) {
+        this.productId = productId;
+    }
 
 }
